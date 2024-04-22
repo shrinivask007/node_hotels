@@ -2,6 +2,8 @@ const express = require('express')
 const app = express();
 const db= require('./db');
 
+//This is server
+
 app.get('/', function (req, res) {
   res.send('Hi am shree')
 })
