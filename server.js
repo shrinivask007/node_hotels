@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express();
 const db= require('./db');
-
+require ('dotenv').config();
 //This is server
 
 app.get('/', function (req, res) {
@@ -19,6 +19,6 @@ const menuItemsRoutes =require('./routes/menuItemsRoutes');
 app.use('/menuItems', menuItemsRoutes);
 
 
-app.listen(3000, ()=>{
+app.listen(process.env.PORT || 3000, ()=>{
   console.log('listining on port 3000')
 })
